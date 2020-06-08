@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		8DD40746248E7C3E0047928D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD40744248E7C3E0047928D /* Main.storyboard */; };
 		8DD40748248E7C410047928D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD40747248E7C410047928D /* Assets.xcassets */; };
 		8DD4074B248E7C420047928D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD40749248E7C420047928D /* LaunchScreen.storyboard */; };
+		8DD40753248E96220047928D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD40752248E96220047928D /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8DD40747248E7C410047928D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DD4074A248E7C420047928D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DD4074C248E7C420047928D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD40752248E96220047928D /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CFF43887A3D689BAAE389C26 /* Pods-PhotoZou2020RC01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoZou2020RC01.debug.xcconfig"; path = "Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01.debug.xcconfig"; sourceTree = "<group>"; };
 		E486F91C29D8C5CA10899BB5 /* Pods-PhotoZou2020RC01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoZou2020RC01.release.xcconfig"; path = "Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				8DD40740248E7C3E0047928D /* SceneDelegate.swift */,
 				8DD40742248E7C3E0047928D /* ViewController.swift */,
 				8DD40744248E7C3E0047928D /* Main.storyboard */,
+				8DD40752248E96220047928D /* DataModel.swift */,
 				8DD40747248E7C410047928D /* Assets.xcassets */,
 				8DD40749248E7C420047928D /* LaunchScreen.storyboard */,
 				8DD4074C248E7C420047928D /* Info.plist */,
@@ -88,7 +91,6 @@
 				CFF43887A3D689BAAE389C26 /* Pods-PhotoZou2020RC01.debug.xcconfig */,
 				E486F91C29D8C5CA10899BB5 /* Pods-PhotoZou2020RC01.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD40743248E7C3E0047928D /* ViewController.swift in Sources */,
+				8DD40753248E96220047928D /* DataModel.swift in Sources */,
 				8DD4073F248E7C3E0047928D /* AppDelegate.swift in Sources */,
 				8DD40741248E7C3E0047928D /* SceneDelegate.swift in Sources */,
 			);

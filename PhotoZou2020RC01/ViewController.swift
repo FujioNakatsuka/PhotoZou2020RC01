@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,XMLParserDelegate {
 
@@ -16,12 +17,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var parser = XMLParser()
     var currentElementName:String!
-    var mobile_access_Label = UILabel()
+//    var mobile_access_Label = UILabel()
+//    var address_Label = UILabel()
     
-    
-
+    var dataModel = [DataModel]()
+    var imageVIew = UIImageView()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+   
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+    
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
