@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B434583D4A2EDD0F141A7C9 /* Pods_PhotoZou2020RC01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E584198C156BE72F8EF7D9 /* Pods_PhotoZou2020RC01.framework */; };
 		8DD4073F248E7C3E0047928D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4073E248E7C3E0047928D /* AppDelegate.swift */; };
 		8DD40741248E7C3E0047928D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD40740248E7C3E0047928D /* SceneDelegate.swift */; };
 		8DD40743248E7C3E0047928D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD40742248E7C3E0047928D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55E584198C156BE72F8EF7D9 /* Pods_PhotoZou2020RC01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoZou2020RC01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4073B248E7C3E0047928D /* PhotoZou2020RC01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoZou2020RC01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4073E248E7C3E0047928D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD40740248E7C3E0047928D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		8DD40747248E7C410047928D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DD4074A248E7C420047928D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DD4074C248E7C420047928D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF43887A3D689BAAE389C26 /* Pods-PhotoZou2020RC01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoZou2020RC01.debug.xcconfig"; path = "Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01.debug.xcconfig"; sourceTree = "<group>"; };
+		E486F91C29D8C5CA10899BB5 /* Pods-PhotoZou2020RC01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoZou2020RC01.release.xcconfig"; path = "Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B434583D4A2EDD0F141A7C9 /* Pods_PhotoZou2020RC01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		684495FF41A275F67635382D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55E584198C156BE72F8EF7D9 /* Pods_PhotoZou2020RC01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8DD40732248E7C3E0047928D = {
 			isa = PBXGroup;
 			children = (
 				8DD4073D248E7C3E0047928D /* PhotoZou2020RC01 */,
 				8DD4073C248E7C3E0047928D /* Products */,
+				B068F25195B02FD0C4A75E7A /* Pods */,
+				684495FF41A275F67635382D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = PhotoZou2020RC01;
 			sourceTree = "<group>";
 		};
+		B068F25195B02FD0C4A75E7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFF43887A3D689BAAE389C26 /* Pods-PhotoZou2020RC01.debug.xcconfig */,
+				E486F91C29D8C5CA10899BB5 /* Pods-PhotoZou2020RC01.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DD4074F248E7C420047928D /* Build configuration list for PBXNativeTarget "PhotoZou2020RC01" */;
 			buildPhases = (
+				0B9CB5761FCAC6B1414724D5 /* [CP] Check Pods Manifest.lock */,
 				8DD40737248E7C3E0047928D /* Sources */,
 				8DD40738248E7C3E0047928D /* Frameworks */,
 				8DD40739248E7C3E0047928D /* Resources */,
+				FE2B5E25CE48AD9E3A410746 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B9CB5761FCAC6B1414724D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoZou2020RC01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE2B5E25CE48AD9E3A410746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoZou2020RC01/Pods-PhotoZou2020RC01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DD40737248E7C3E0047928D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8DD40750248E7C420047928D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF43887A3D689BAAE389C26 /* Pods-PhotoZou2020RC01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +364,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nifty.cbm01799.PhotoZou2020RC01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8DD40751248E7C420047928D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E486F91C29D8C5CA10899BB5 /* Pods-PhotoZou2020RC01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nifty.cbm01799.PhotoZou2020RC01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

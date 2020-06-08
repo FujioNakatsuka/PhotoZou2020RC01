@@ -1,0 +1,6 @@
+framework module Pods_PhotoZou2020RC01 {
+  umbrella header "Pods-PhotoZou2020RC01-umbrella.h"
+
+  export *
+  module * { export * }
+}
