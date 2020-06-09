@@ -28,20 +28,74 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
    
         tableView.delegate = self
         tableView.dataSource = self
+   
+        let urlString:String = "https://api.photozou.jp/rest/search_public?type=photo&keyword=夏空"
         
+        
+        //PercentEncoding
+        let encodeUrlString:String = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        let photozouurl:URL = URL(string: encodeUrlString)!
+        
+        self.parser = XMLParser(contentsOf: photozouurl)!
+        
+        self.parser.delegate = self
+        self.parser.parse()
     
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+     }
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return dataModel.count
+     }
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     return 402
+     }
     
+    
+       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let dataItem = self.dataModel[indexPath.row]
+
+        imageVIew = cell.contentView.viewWithTag(1) as! UIImageView
+        
+        imageView.sd_setImage(with: URL(string:dataItem.image_url!), placeholderImage: UIImage(named: "noimage"), options:.continueInBackground, completed:nil)
+        
+        return cell
+
+    }
+ 
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+    currentElementName = nil
+    if elementName == "photo"{
+    self.dataModel.append(DataModel())
+    }else{
+    currentElementName = elementName
+    }
+    }
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+    if self.dataModel.count > 0{
+    //[1]
+    let lastItem = self.dataModel[self.dataModel.count - 1]
+    switch self.currentElementName{
+    case "image_url":
+    lastItem.image_url = string
+    default:break
     }
 }
-
+    
+}
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        self.currentElementName = nil
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        self.tableView.reloadData()
+    }
+    
+    
+}
